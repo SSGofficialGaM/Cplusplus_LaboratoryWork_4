@@ -1,0 +1,102 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+    //Task 1 (6)
+    bool answer;
+    int value;
+    
+    cout << "Enter a value: ";
+    cin >> value;
+    
+    if (value >= 0 && value < 10 || value * 2 < 20 && value - 2 > -2 || value - 1 > 1 && value / 2 < 10 || value == 111) {
+        answer = true;
+    }
+    else {
+        answer = false;
+    }
+    
+    cout << (answer ? "THAT'S TRUE :)" : "THAT'S NOT TRUE :(") << endl;
+    return 0;
+    
+    //Task 2 (7)
+    float var_1, var_2;
+    long double var_3, var_4, var_5;
+    
+    cout << "Enter the first number: ";
+    cin >> var_1;
+    
+    cout << "Enter the second number: ";
+    cin >> var_2;
+    
+    cout << "Enter the third number: ";
+    cin >> var_3;
+    
+    cout << "Enter the fourth number: ";
+    cin >> var_4;
+    
+    cout << "Enter the fifth number: ";
+    cin >> var_5;
+    
+    cout << (float) var_1 << endl;
+    cout << (double) var_2 << endl;
+    cout << setprecision(10) << (long double) var_3 << endl;
+    cout << setprecision(6) << (double) var_4 << endl;
+    cout << (int) var_5;
+    
+    //Task 3 (8)
+    int numA;
+    int numB;
+    
+    cout << "Enter the first integer: ";
+    cin >> numA;
+    
+    cout << "Enter the second integer: ";
+    cin >> numB;
+    
+    if (1. / numA == 1. / numB && numA != 0 && numB != 0) {
+        cout << "Results are equal (by 0.000001 epsilon)";
+    }
+    else if (numA == 0 && numB == 0 || numA == 0 || numB == 0) {
+        cout << "Error! An integer can't be divided by zero as it gives a nondefined result (NaN).";
+    }
+    else {
+        cout << "Results are not equal (by 0.000001 epsilon)";
+    }
+    
+    //Task 4 (9)
+    int netNum1, netNum2, netNum3, netNum4;
+    cout << "Enter the first part of an IP number: ";
+    cin >> netNum1;
+    
+    if (netNum1 >= 1 && netNum1 <= 255) {
+        cout << "Enter the second part of an IP number: ";
+        cin >> netNum2;
+        
+        if (netNum2 >= 1 && netNum2 <= 255) {
+            cout << "Enter the third part of an IP number: ";
+            cin >> netNum3;
+            
+            if (netNum3 >= 1 && netNum3 <= 255) {
+                cout << "Enter the last part of an IP number: ";
+                cin >> netNum4;
+                if (netNum4 >= 1 && netNum4 <= 255) {
+                    cout << "An IP number result: " << netNum1 << "." << netNum2 << "." << netNum3 << "." << netNum4;
+                }
+                else {
+                    cout << "Error! You must only enter a number from a 1-255 range.";
+                }
+            }
+            else {
+                cout << "Error! You must only enter a number from a 1-255 range.";
+            }
+        }
+        else {
+            cout << "Error! You must only enter a number from a 1-255 range.";
+        }
+    }
+    else {
+        cout << "Error! You must only enter a number from a 1-255 range.";
+    }
+}
